@@ -13,6 +13,7 @@ if ($numero1>$numero2){
 {if ($numero2==$numero1){
  $salida="tipo 2";
 }else
+$salida="tipo 3";
 {if ($numero2>10){
  $salida="tipo 31";
 }else

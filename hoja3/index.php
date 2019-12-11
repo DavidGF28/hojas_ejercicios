@@ -16,7 +16,7 @@
         <div>
             <ul>
                 <li><a href="I-seleccion/1.html">Ejercicio1</a></li>
-                <li><a href="/2.php">Ejercicio2</a></li>
+                <li><a href="II-seleccion/2.html">Ejercicio2</a></li>
                 <li><a href="/3.php">Ejercicio3</a></li>
                 <li><a href="/4.php">Ejercicio4</a></li>
                 <li><a href="/5.php">Ejercicio5</a></li>
