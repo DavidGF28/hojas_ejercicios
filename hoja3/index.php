@@ -23,9 +23,9 @@
                 <li><a href="VI-bucle-for/6.php">Ejercicio6</a></li>
                 <li><a href="VII-bucle/7.php">Ejercicio7</a></li>
                 <li><a href="VIII-bucle-do-while/8.html">Ejercicio8</a></li>
-                <li><a href="/9.php">Ejercicio9</a></li>
-                <li><a href="/10.php">Ejercicio10</a></li>
-                <li><a href="/11.php">Ejercicio11</a></li>
+                <li><a href="IX-bucles/9.html">Ejercicio9</a></li>
+                <li><a href="X-bucles/10.html">Ejercicio10</a></li>
+                <li><a href="XI-bucles/11.html">Ejercicio11</a></li>
             </ul>
         </div>
     </body>
