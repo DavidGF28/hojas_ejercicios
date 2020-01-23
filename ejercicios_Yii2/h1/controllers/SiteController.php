@@ -85,4 +85,15 @@ class SiteController extends Controller
          "datos"=>Yii::$app->db->createCommand("select * from entradas")->queryAll(),
          ]);   
     }
+    
+    public function ActionMostrar()
+    {
+        $dataProvider = new ActiveDataProvider([
+            'query' => Entradas::find(),
+        ]);
+                
+        return $this->render('mostrar', [
+            'dataProvider'=> $dataProvider,
+            ]);
+    }
 }

@@ -47,8 +47,9 @@ AppAsset::register($this);
             ['label' => 'Listar4','url' => ['/site/listar4']],
             ['label' => 'Listar5','url' => ['/site/listar5']],
             ['label' => 'Listar6','url' => ['/site/listar6']],
-            ]],            
-        ],
+            ]],
+            ['label' => 'Mostrar','url' => ['/site/Mostrar']],
+            ],
     ]);
     NavBar::end();
     ?>
