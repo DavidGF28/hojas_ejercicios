@@ -39,20 +39,15 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
-            Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/site/login']]
-            ) : (
-                '<li>'
-                . Html::beginForm(['/site/logout'], 'post')
-                . Html::submitButton(
-                    'Logout (' . Yii::$app->user->identity->username . ')',
-                    ['class' => 'btn btn-link logout']
-                )
-                . Html::endForm()
-                . '</li>'
-            )
+            ['label'=> 'Listados','items'=>[
+            ['label' => 'Listar','url' => ['/site/listar']],
+            ['label' => 'Listar1','url' => ['/site/listar1']],
+            ['label' => 'Listar2','url' => ['/site/listar2']],
+            ['label' => 'Listar3','url' => ['/site/listar3']],
+            ['label' => 'Listar4','url' => ['/site/listar4']],
+            ['label' => 'Listar5','url' => ['/site/listar5']],
+            ['label' => 'Listar6','url' => ['/site/listar6']],
+            ]],            
         ],
     ]);
     NavBar::end();
@@ -69,9 +64,7 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
-
-        <p class="pull-right"><?= Yii::powered() ?></p>
+        <p class="pull-left">DavidGF - Alpe Formacion 2020</p>
     </div>
 </footer>
 

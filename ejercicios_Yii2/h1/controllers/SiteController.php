@@ -9,6 +9,7 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\Entradas;
 
 class SiteController extends Controller
 {  
@@ -30,5 +31,58 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
-   
+    public function actionListar()
+    {
+     $s= Entradas::find()->asArray()->all();
+     
+     return $this->render("listar",
+             [
+                 "datos"=>$s,
+             ]);
+    }
+    
+    public function actionListar1()
+    {
+     $s= Entradas::find()->all();
+     
+     return $this->render("listarTodos",
+             [
+                 "datos"=>$s,
+             ]);
+    }
+    
+    public function actionListar2()
+    {
+     $salida=Entradas::find()->select(['texto'])->asArray()->all();
+     return $this->render("listarTodos",["datos"=>$salida]);
+    }
+    
+    public function actionListar3()
+    {
+     $salida=Entradas::find()->select(['texto'])->all();
+     return $this->render("listarTodos",["datos"=>$salida]);
+    }
+    
+    public function actionListar4()
+    {
+     $salida= new Entradas();
+     return $this->render("listarTodos",[
+         "datos"=>$salida->find()->all()
+             ]);
+    }
+    
+    public function actionListar5()
+    {
+     $salida= new Entradas();
+     return $this->render("listarTodos",[
+         "datos"=>$salida->findOne(1),
+             ]);
+    }
+    
+    public function actionListar6() 
+    {
+     return $this->render('listarTodos',[
+         "datos"=>Yii::$app->db->createCommand("select * from entradas")->queryAll(),
+         ]);   
+    }
 }
