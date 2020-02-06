@@ -8,6 +8,7 @@ use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\Entradas;
+use yii\data\ActiveDataProvider;
 
 class SiteController extends Controller
 {  
@@ -84,7 +85,7 @@ class SiteController extends Controller
          ]);   
     }
     
-    public function ActionMostrar()
+    public function actionMostrar()
     {
         $dataProvider = new ActiveDataProvider([
             'query' => Entradas::find(),
